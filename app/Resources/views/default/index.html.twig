@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="jumbotron" style="text-align: center;margin-top:30px">
+        {% if not app.user %}
+            <a class="btn btn-lg btn-primary" href="\login" role="button">Login</a>
+            or
+            <a class="btn btn-lg btn-primary" href="\register" role="button">register</a>
+        {% else %}
+            <a class="btn btn-lg btn-primary" href="\users" role="button">Show user list</a>
+            or
+            <a class="btn btn-lg btn-primary" href="\logout" role="button">logout</a>
+        {% endif %}
+    </div>
+{% endblock %}
